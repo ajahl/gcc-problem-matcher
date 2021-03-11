@@ -1,8 +1,8 @@
-name: "Problem Matcher"
+name: "GCC Problem Matcher"
 
-description: "Sets up a problem matcher that's used to create annotations for violations"
+description: "Sets up a problem matcher that's used to create annotations for GCC Warnings and Errors"
 
-author: "xt0rted"
+author: "electronjoe thanks to xt0rted Template"
 
 branding:
   icon: "command"

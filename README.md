@@ -1,5 +1,9 @@
 # GitHub Actions Problem Matcher
 
+Big thank-you to [xt0rted](https://github.com/xt0rted) for the TEMPLATE.
+
+The pattern match regex [comes from vs-code](https://github.com/microsoft/vscode-cpptools/blob/a8285cbc0efb5b09c2d2229b0e0772dcb3b602df/Extension/package.json#L76-L94).
+
 [![CI Workflow Status](https://github.com/xt0rted/problem-matcher/workflows/CI/badge.svg)](https://github.com/xt0rted/problem-matcher/actions?query=workflow%3ACI)
 
 A GitHub Actions template to easily add or remove a problem matcher to workflows.

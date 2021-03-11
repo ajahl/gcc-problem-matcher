@@ -1,8 +1,8 @@
 {
-  "name": "problem-matcher",
+  "name": "gcc-problem-matcher",
   "version": "1.0.0",
   "private": true,
-  "description": "Sets up a problem matcher to create annotations for violations",
+  "description": "Sets up a problem matcher to create annotations for gcc warnings and errors",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
@@ -13,15 +13,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xt0rted/problem-matcher.git"
+    "url": "git+https://github.com/electronjoe/gcc-problem-matcher.git"
   },
   "keywords": [
     "actions",
     "github",
     "problem-matcher",
+    "gcc",
+    "warnings",
     "annotations"
   ],
-  "author": "xt0rted",
+  "author": "electronjoe courtesy TEMPLATE by xt0rted",
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.2.6"
