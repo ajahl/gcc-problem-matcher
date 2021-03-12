@@ -1,25 +1,10 @@
-# GitHub Actions Problem Matcher
+# GitHub Actions GCC Problem Matcher
 
-Big thank-you to [xt0rted](https://github.com/xt0rted) for the TEMPLATE.
+Big thank-you to [xt0rted](https://github.com/xt0rted) for the Github Actions Problem Matcher Template: well documented, excellent test coverage and commenting.
 
-The pattern match regex [comes from vs-code](https://github.com/microsoft/vscode-cpptools/blob/a8285cbc0efb5b09c2d2229b0e0772dcb3b602df/Extension/package.json#L76-L94).
+The pattern match regex used here [comes from vs-code](https://github.com/microsoft/vscode-cpptools/blob/a8285cbc0efb5b09c2d2229b0e0772dcb3b602df/Extension/package.json#L76-L94), and was motivated by [gcc-problem-matcher by Ammar Askar](https://github.com/ammaraskar/gcc-problem-matcher).
 
-[![CI Workflow Status](https://github.com/xt0rted/problem-matcher/workflows/CI/badge.svg)](https://github.com/xt0rted/problem-matcher/actions?query=workflow%3ACI)
-
-A GitHub Actions template to easily add or remove a problem matcher to workflows.
-
-## Setup
-
-This template has been designed so the only code change you should have to make is in [problem-matcher.json](.github/problem-matcher.json) and optionally the tests for it.
-When editing the `problem-matcher.json` you should set the owner name to the application and/or report style being matched.
-Examples of this are `eslint`, `eslint-compact`, or `eslint-stylish`.
-
-Make sure to also update the `action.yml` and `package.json` files.
-
-Sometimes report messages might not include a line or column number and your regular expression doesn't pick those lines up.
-To help avoid those situations tests are provided to give coverage to the regular expression.
-
-A useful resource to view and test your regular expression is [regex101.com](https://regex101.com/).
+[![CI Workflow Status](https://github.com/electronjoe/gcc-problem-matcher/workflows/CI/badge.svg)](https://github.com/electronjoe/gcc-problem-matcher/actions?query=workflow%3ACI)
 
 ## Usage
 
@@ -30,9 +15,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: xt0rted/problem-matcher@v1
+      - uses: electronjoe/gcc-problem-matcher@v1
       - run: echo "Run some tests that will be picked up"
-      - uses: xt0rted/problem-matcher@v1
+      - uses: electrojoe/gcc-problem-matcher@v1
         with:
           action: remove
       - run: echo "Run some more tests that shouldn't be picked up"
@@ -47,3 +32,23 @@ Name | Allowed values | Description
 ## License
 
 The scripts and documentation in this project are released under the [MIT License](LICENSE)
+
+## Build & Release Updates to electronjoe/gcc-problem-matcher
+
+From a clean checkout:
+
+```shell
+git checkout releases/v1 && git merge main
+
+purge dist && purge lib && purge node_modules
+
+npm ci
+
+npm run lint --if-present && npm test
+
+npm run build && npm run release
+
+git commit -m "Release v1.1.0"      # creates the release commit
+git tag -fa v1 -m "Update v1 tag"   # updates the v1 tag to point to the latest release
+git push origin && git push origin v1 --force
+```
