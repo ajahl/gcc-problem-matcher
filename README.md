@@ -4,7 +4,7 @@ Big thank-you to [xt0rted](https://github.com/xt0rted) for the Github Actions Pr
 
 The pattern match regex used here [comes from vs-code](https://github.com/microsoft/vscode-cpptools/blob/a8285cbc0efb5b09c2d2229b0e0772dcb3b602df/Extension/package.json#L76-L94), and was motivated by [gcc-problem-matcher by Ammar Askar](https://github.com/ammaraskar/gcc-problem-matcher).
 
-[![CI Workflow Status](https://github.com/electronjoe/gcc-problem-matcher/workflows/CI/badge.svg)](https://github.com/electronjoe/gcc-problem-matcher/actions?query=workflow%3ACI)
+[![CI Workflow Status](https://github.com/ajahl/gcc-problem-matcher/workflows/CI/badge.svg)](https://github.com/ajahl/gcc-problem-matcher/actions?query=workflow%3ACI)
 
 ## Usage
 
