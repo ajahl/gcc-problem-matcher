@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: electronjoe/gcc-problem-matcher@v1
       - run: echo "Run some tests that will be picked up"
-      - uses: electrojoe/gcc-problem-matcher@v1
+      - uses: electrojoe/gcc-problem-matcher@v2
         with:
           action: remove
       - run: echo "Run some more tests that shouldn't be picked up"
